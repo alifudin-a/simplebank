@@ -24,5 +24,8 @@ lptn:
 
 start:
 	docker start postgres12
+
+server:
+	go run main.go
 	
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test lptn start
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test lptn start server
