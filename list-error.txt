@@ -1,6 +1,0 @@
-Error 1:
-Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use.
-
-How to solve:
-- sudo ss -lptn 'sport = :5432'
-- sudo kill <pid>
