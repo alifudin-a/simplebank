@@ -15,5 +15,14 @@ migratedown:
 
 sqlc:
 	sqlc generate
+
+test:
+	go test -v -cover ./...
+
+lptn:
+	sudo ss -lptn 'sport = :5432'
+
+start:
+	docker start postgres12
 	
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test lptn start
